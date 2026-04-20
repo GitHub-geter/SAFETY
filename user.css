@@ -1,0 +1,126 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: #0b0c0e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    /* Solid dark red background */
+    background: #ada5a5;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    background: #7c1111;
+    border: 2px solid #b30000;
+    border-radius: 2rem;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== ALERT BUTTON ===== */
+.button {
+    display: block;
+    width: 100%;
+    padding: 1.4rem 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #fff;
+    background: #cc0000;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #660000,
+                0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.08s ease;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 0 #4d0000;
+    border: 1px solid #e65c5c;
+}
+
+.button:hover {
+    background: #e60000;
+    transform: translateY(3px);
+    box-shadow: 0 5px 0 #660000,
+                0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: translateY(8px);
+    box-shadow: 0 0 0 #660000,
+                0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== REASON SECTION ===== */
+.reason {
+    margin-top: 1rem;
+}
+
+.reason label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0a0a0;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.reason textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    background: #1a0404;
+    border: 2px solid #990000;
+    border-radius: 20px;
+    color: #fff0f0;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 140px;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.5);
+    transition: border 0.2s;
+}
+
+.reason textarea:focus {
+    outline: none;
+    border-color: #cc3333;
+    background: #200606;
+}
+
+.reason textarea::placeholder {
+    color: #b36666;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1.8rem 1.2rem;
+        border-radius: 1.5rem;
+    }
+    .button {
+        font-size: 1.5rem;
+        padding: 1rem;
+        letter-spacing: 4px;
+    }
+    .reason label {
+        font-size: 1.1rem;
+    }
+}

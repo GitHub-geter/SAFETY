@@ -1,0 +1,25 @@
+   try {
+        // ✅ Send to backend
+        const response = await fetch("http://localhost:5000/alert", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(alertData)
+        });
+
+        const data = await response.json();
+
+        // ✅ Success check
+        if (response.ok) {
+            alert("Alert sent successfully!");
+            textInput.value = "";
+        } else {
+            alert("Failed to send alert");
+        }
+
+    } catch (error) {
+        console.error(error);
+        alert("Server error!");
+    }
+});
